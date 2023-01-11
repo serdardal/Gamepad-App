@@ -8,11 +8,13 @@ import 'models.dart';
 class GamepadButton extends StatefulWidget {
   final WebSocketChannel? channel;
   final String name;
+  final String symbol;
   final int button;
   const GamepadButton(
       {Key? key,
       required this.channel,
       required this.name,
+      required this.symbol,
       required this.button})
       : super(key: key);
 
@@ -51,14 +53,41 @@ class _GamepadButtonState extends State<GamepadButton> {
                           borderRadius: BorderRadius.circular(10),
                           onTapDown: _onDown,
                           onTapUp: _onUp,
-                          child: Center(
-                              child: Text(
-                            widget.name,
-                            style: const TextStyle(
-                                color: Colors.black87,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20),
-                          )),
+                          child: Column(children: [
+                            Expanded(
+                                flex: 3,
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                        child: Align(
+                                            alignment: const Alignment(0, 0.4),
+                                            child: Text(
+                                              widget.name,
+                                              style: const TextStyle(
+                                                  color: Colors.black87,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 25),
+                                            )))
+                                  ],
+                                )),
+                            Expanded(
+                                flex: 1,
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                        child: Align(
+                                            alignment:
+                                                const Alignment(0.9, 0.9),
+                                            child: Text(
+                                              widget.symbol,
+                                              style: const TextStyle(
+                                                  color: Colors.purple,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 15),
+                                            )))
+                                  ],
+                                ))
+                          ]),
                         )),
                   ),
                 )

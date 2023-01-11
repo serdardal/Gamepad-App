@@ -87,10 +87,14 @@ class _ButtonsPageState extends State<ButtonsPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
-                GamepadButton(channel: channel, name: '1', button: 1),
-                GamepadButton(channel: channel, name: '2', button: 2),
-                GamepadButton(channel: channel, name: '3', button: 3),
-                GamepadButton(channel: channel, name: '4', button: 4)
+                GamepadButton(
+                    channel: channel, name: '1', symbol: 'A', button: 1),
+                GamepadButton(
+                    channel: channel, name: '2', symbol: 'B', button: 2),
+                GamepadButton(
+                    channel: channel, name: '3', symbol: 'X', button: 3),
+                GamepadButton(
+                    channel: channel, name: '4', symbol: 'Y', button: 4)
               ],
             )),
             Expanded(
@@ -98,10 +102,14 @@ class _ButtonsPageState extends State<ButtonsPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
-                GamepadButton(channel: channel, name: '5', button: 5),
-                GamepadButton(channel: channel, name: '6', button: 6),
-                GamepadButton(channel: channel, name: '7', button: 7),
-                GamepadButton(channel: channel, name: '8', button: 8)
+                GamepadButton(
+                    channel: channel, name: '5', symbol: 'Up', button: 5),
+                GamepadButton(
+                    channel: channel, name: '6', symbol: 'Down', button: 6),
+                GamepadButton(
+                    channel: channel, name: '7', symbol: 'Left', button: 7),
+                GamepadButton(
+                    channel: channel, name: '8', symbol: 'Right', button: 8)
               ],
             )),
             Expanded(
@@ -109,8 +117,10 @@ class _ButtonsPageState extends State<ButtonsPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
-                GamepadButton(channel: channel, name: '9', button: 9),
-                GamepadButton(channel: channel, name: '10', button: 10),
+                GamepadButton(
+                    channel: channel, name: '9', symbol: 'Start', button: 9),
+                GamepadButton(
+                    channel: channel, name: '10', symbol: 'Back', button: 10),
                 Expanded(
                     flex: 2,
                     child: SizedBox(
