@@ -78,6 +78,7 @@ class _ButtonsPageState extends State<ButtonsPage> {
     return Scaffold(
         appBar: AppBar(
           title: const Text('Buttons'),
+          backgroundColor: Colors.blue,
         ),
         drawer: const AppMenu(),
         body: Column(
